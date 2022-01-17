@@ -2,6 +2,10 @@ package com.softserveinc.task03;
 
 // TODO: import the class City created in previous task
 
+import com.softserveinc.task02.City;
+
+import java.util.Arrays;
+
 /**
      1. Create a public class named `Country` in this package
      2. Class should have the private fields:
@@ -20,15 +24,17 @@ package com.softserveinc.task03;
 public class Main {
     public static void main(String[] args) {
         // TODO: Uncomment code bellow after the class Country have been created
-//        City kyiv = new City("Kyiv", "Kyivska", "Ukraine", 2_884_000);
-//        Country ukraine = new Country("Ukraine", "Eurasia", "UA", kyiv);
-//
-//        City dnipro = new City("Dnipro", "Dnipropetrovskaya", "Ukraine", 966_400);
-//        City lviv = new City("Lviv", "Lvivska", "Ukraine", 721_301);
-//
-//        ukraine.addCity(dnipro);
-//        ukraine.addCity(lviv);
-//
-//        System.out.println(kyiv);
+        City kyiv = new City("Kyiv", "Kyivska", "Ukraine", 2_884_000);
+        Country ukraine = new Country("Ukraine", "Eurasia", "UA", kyiv);
+
+        City dnipro = new City("Dnipro", "Dnipropetrovskaya", "Ukraine", 966_400);
+        City lviv = new City("Lviv", "Lvivska", "Ukraine", 721_301);
+
+        ukraine.addCity(dnipro);
+        ukraine.addCity(lviv);
+
+        System.out.println(kyiv);
+        System.out.println(Arrays.toString(ukraine.getCities()));
+        System.out.println(ukraine.getInhabitants());
     }
 }
